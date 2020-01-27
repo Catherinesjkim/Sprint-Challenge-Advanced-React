@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
 import * as rtl from '@testing-library/react';
 import { toBeInTheDocument, toHaveClass } from '@testing-library/jest-dom';
-expect.extend({toBeInTheDocument, toHaveClass})
+expect.extend({ toBeInTheDocument, toHaveClass })
 import renderer from 'react-test-renderer';
+import Players from './components/Players';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -12,15 +12,15 @@ it('renders without crashing', () => {
 });
 
 // First unit test: classname test
-// test("It has a classname toggle - container", () => {
-//   const{ getByTestId } = rtl.render(<App />);
-//   expect(getByTestId("toggle")).toBeInTheDocument();
-//   expect(getByTestId("toggle")).toHaveClass("App");
-// });
+test("It has a classname toggle - container", () => {
+  const{ getByTestId } = rtl.render(<App />);
+  expect(getByTestId("toggle")).toBeInTheDocument();
+  expect(getByTestId("toggle")).toHaveClass("App");
+});
 
-// Second test: snapshot test to ensure our UI doesn't change without the team knowing about it. 
+// Second unit test: snapshot test to ensure our UI doesn't change without the team knowing about it. 
 test("renders correctly when there are no players", () => {
-  const tree = renderer.create(<App />).toJSON();
+  const tree = renderer.create(<Players />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

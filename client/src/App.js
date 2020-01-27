@@ -22,7 +22,7 @@ class App extends React.Component {
 
     render () {
       return (
-        <div className="App" data-testide="toggle">
+        <div className="App" data-testid="toggle">
           <Navbar />
           <div className="header">
             <h1>Players</h1>
@@ -32,9 +32,9 @@ class App extends React.Component {
 
               return (
                 <Players 
-                name={info.name}
-                country={info.country}
-                searches={info.searches}
+                  name={info.name}
+                  country={info.country}
+                  searches={info.searches}
                 />
               )
             })}
