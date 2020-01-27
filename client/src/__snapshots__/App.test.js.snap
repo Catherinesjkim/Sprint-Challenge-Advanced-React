@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are no players 1`] = `
+<div
+  className="App"
+  data-testide="toggle"
+>
+  <nav
+    className="navbar"
+  >
+    <h1>
+      Women's World Cup Most Searched players
+    </h1>
+    <div
+      className="secondLine"
+    >
+      <h2>
+        By Google Trends
+      </h2>
+    </div>
+  </nav>
+  <div
+    className="header"
+  >
+    <h1>
+      Players
+    </h1>
+  </div>
+  <div />
+</div>
+`;
