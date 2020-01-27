@@ -1,3 +1,4 @@
+// 3. Build a custom hook and use it in your app - this can be a localStorage hook, a fetch hook, a dark mode hook, or any other hook you would like
 import React from 'react';
 
 const Navbar = () => {
